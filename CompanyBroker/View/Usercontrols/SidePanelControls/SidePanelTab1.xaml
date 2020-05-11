@@ -1,0 +1,201 @@
+﻿<UserControl x:Class="CompanyBroker.View.Usercontrols.SidePanelControls.SidePanelTab1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CompanyBroker.View.Usercontrols.SidePanelControls"
+             DataContext="{Binding SidePanelTab1,Source={StaticResource Locator}}"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="300" MinWidth="300" Background="White">
+    <Grid>
+        <!-- Grid definitions -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <!-- Text information - Row 0 -->
+        <Label Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" HorizontalContentAlignment="Center">Filter overview</Label>
+        <!-- Company list choice - Row 1 -->
+        <Grid Grid.Column="0" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="85"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="10"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <!-- Column 0 -->
+            <Label Grid.Column="0"  VerticalAlignment="Center" HorizontalContentAlignment="Center">Company</Label>
+            <!-- Column 1 -->
+            <ComboBox Grid.Column="1" Height="25" ItemsSource="{Binding CompanyList}" SelectedItem="{Binding SelectedCompanyListItem}" ></ComboBox>
+        </Grid>
+
+        <!-- Resources Choices to a list filtering type of label - row 2-->
+        <Grid Grid.Column="0" Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="85"></ColumnDefinition>
+                <ColumnDefinition Width="22*"></ColumnDefinition>
+                <ColumnDefinition Width="183*"/>
+                <ColumnDefinition Width="10"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <!-- Column 0 -->
+            <Label Grid.Column="0"  VerticalAlignment="Center" HorizontalContentAlignment="Center" Margin="0,4,0,3">-</Label>
+            <!-- Column 1 -->
+            <ComboBox Grid.Column="1" Height="25" ItemsSource="{Binding CompanyChoicesList}" SelectedItem="{Binding RemoveCompanyChoicesIndex}" Grid.ColumnSpan="2" Margin="0,4"></ComboBox>
+        </Grid>
+
+
+        <!-- Content for Row 3 -->
+        <!-- Resource list choice  -->
+        <Grid Grid.Column="0" Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="85"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="10"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <!-- Column 0 -->
+            <Label Grid.Column="0"  VerticalAlignment="Center" HorizontalContentAlignment="Center">Product type</Label>
+            <!-- Column 1 -->
+            <ComboBox Grid.Column="1" Height="25" ItemsSource="{Binding ProductTypeList}" SelectedItem="{Binding SelectedProductListItem}"></ComboBox>
+        </Grid>
+
+
+        <!-- Resources Choices to a list filtering type of label - row 4-->
+        <Grid Grid.Column="0" Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="85"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="10"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <!-- Column 0 -->
+            <Label Grid.Column="0"  VerticalAlignment="Center" HorizontalContentAlignment="Center">-</Label>
+            <!-- Column 1 -->
+            <ComboBox Grid.Column="1" Height="25" ItemsSource="{Binding ProductTypeChoicesList}" SelectedItem="{Binding RemoveProductTypeChoicesIndex}"></ComboBox>
+        </Grid>
+
+
+
+        <!-- Content for Row 3 -->
+        <!-- Resource list choice  -->
+        <Grid Grid.Column="0" Grid.Row="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="85"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="10"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <!-- Column 0 -->
+            <Label Grid.Column="0"  VerticalAlignment="Center" HorizontalContentAlignment="Center">Product name</Label>
+            <!-- Column 1 -->
+            <ComboBox Grid.Column="1" Height="25" ItemsSource="{Binding ProductNameList}" SelectedItem="{Binding SelectedProductNameListItem}"></ComboBox>
+        </Grid>
+
+        <!-- Content for Row 6 -->
+        <!-- Resource list choice  -->
+        <Grid Grid.Column="0" Grid.Row="6">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="85"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="10"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <!-- Column 0 -->
+            <Label Grid.Column="0"  VerticalAlignment="Center" HorizontalContentAlignment="Center">-</Label>
+            <!-- Column 1 -->
+            <ComboBox Grid.Column="1" Height="25" ItemsSource="{Binding ProductNameChoicesList}" SelectedItem="{Binding SelectedProductNameChoiceIndex}"></ComboBox>
+        </Grid>
+
+
+
+
+
+
+        <!-- Content for Row 5 -->
+        <!-- Resource list choice -->
+        <Grid Grid.Column="0" Grid.Row="7">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="85"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="10"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <!-- Column 0 -->
+            <Label Grid.Column="0"  VerticalAlignment="Center" HorizontalContentAlignment="Center">Date</Label>
+            <!-- Column 1 -->
+            <DatePicker Grid.Column="1" VerticalAlignment="Center" ></DatePicker>
+        </Grid>
+
+        <!-- Content for Row 6 -->
+        <!-- Resource list choice  -->
+        <Grid Grid.Column="0" Grid.Row="8">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="85"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="10"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <!-- Column 0 -->
+            <Label Grid.Column="0"  VerticalAlignment="Center" HorizontalContentAlignment="Center">Expire date</Label>
+            <!-- Column 1 -->
+            <DatePicker Grid.Column="1"  VerticalAlignment="Center" ></DatePicker>
+        </Grid>
+
+        <!-- Content for Row 7 -->
+        <!-- Partner checkbox-->
+        <Grid Grid.Column="0" Grid.Row="9">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="85"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="10"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <!-- Column 0 -->
+            <!-- Empty -->
+            <!-- Column 1 -->
+            <CheckBox Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" HorizontalContentAlignment="Left" IsChecked="{Binding PartnersOnly}">Partner only</CheckBox>
+        </Grid>
+
+        <!-- Content for Row 8 -->
+        <!-- Partner checkbox-->
+        <Grid Grid.Column="0" Grid.Row="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="85"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="10"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <!-- Column 0 -->
+            <!-- Empty -->
+            <!-- Column 1 -->
+            <CheckBox Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" HorizontalContentAlignment="Left" IsChecked="{Binding BulkBuy}">Bulk</CheckBox>
+        </Grid>
+
+        <!-- Content for Row 11 -->
+        <!-- Resource list choice  -->
+        <Grid Grid.Column="0" Grid.Row="11">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="85"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="10"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="10"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <!-- Column 0 -->
+            <Label Grid.Column="0"  VerticalAlignment="Center" HorizontalContentAlignment="Center">Price</Label>
+            <!-- Column 1 -->
+            <TextBox Grid.Column="1" Height="25" TextAlignment="Center" VerticalContentAlignment="Center"></TextBox>
+            <!-- Column 1 -->
+            <TextBox Grid.Column="3" Height="25" TextAlignment="Center" VerticalContentAlignment="Center"></TextBox>
+        </Grid>
+
+        <!-- Content for Row 12 -->
+        <Button Grid.Column="0" Grid.Row="13" Command="{Binding ResetComand}">Reset</Button>
+    </Grid>
+</UserControl>
